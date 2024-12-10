@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        {{#each posts}}
+        <div class="col-xs-6 col-md-4 col-xxl-3">
+            <div class="card">
+                <a href="/view-post/{{this.id}}">
+                <img src="/images/{{this.photo}}" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <p class="card-text">{{this.number_of_likes}} Likes</p>
+                    <a href="/view-post/{{this.id}}" class="btn btn-primary">View Post</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
